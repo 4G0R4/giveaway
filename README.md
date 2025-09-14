@@ -3,10 +3,9 @@
 
 ## Provably fair bitcoin giveaway picker
 
-Simple tool to give more transparency and credibility to bitcoin giveaways, raffles, tombola, draws, ballots and similars on SN, since sin some cases, zaprank is not a good metric, and with many participants it's hard to randomly pich one (or many) winner fairly. Now you can:
+Simple tool to give more transparency and credibility to bitcoin giveaways, raffles, tombola, draws, ballots and similar on SN. It will help you randomly pick winners fairly. Now you can:
 
 - Have results easily verified.
-
 - Save and share the results in a unique URL.
 
 
