@@ -234,7 +234,7 @@
       let share_block = document.getElementById("block").value
       let share_n_winners = document.getElementById("n_winners").value
       let encrypted = CryptoJS.AES.encrypt(share_block + '&' + share_n_winners + '&' + competitors_for_share, "bitcoin");
-      document.getElementById("url").value = 'https://AG0RA.ggiithub.io/giveaway/?' + encrypted;
+      document.getElementById("url").value = 'https://4g0r4.github.io/giveaway?' + encrypted;
     }
 
     //load saved data
