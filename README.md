@@ -26,8 +26,8 @@ After dividing this `decimal` by the number of participants, we use the modulo o
 
 This `index_number` is applied in the participants list, to get the position of the winner.
 
-`var index_number = decimal % competitors.length;
-var winner = competitors[index_number];`
+`var index_number = decimal % participants.length;
+var winner = participants[index_number];`
 
 For additional winners, the past winners are removed from the list and one more digit is added from the `blockhash`. A maximum 21 was added to avoid working with big numbers.
 
