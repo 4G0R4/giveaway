@@ -10,7 +10,7 @@ A simple tool to give more transparency and credibility to bitcoin giveaways, ra
 2. Randomly pick number of winners (max 210)
 3. Select future block number for the draw to be executed
 4. Get a sharable link to share results with all participants
-5. Have results easily verified, simply hit "Submit" start the verification
+5. Have results easily verified, simply hit “Submit” to start the verification
 6. Save and share the results in a unique URL
 
 Repo: https://github.com/4G0R4/giveaway/
@@ -33,7 +33,7 @@ Now we have an integer (0 to 16777215) from the `blockhash`.
 
 After dividing this `decimal` by the number of participants, we use the modulo operator (`%`) to get the division remainder becomes the `index_number`.
 
-This `index_number` is applied in the participants list, to get the position of the winner.
+This `index_number` is applied in the participants' list, to get the position of the winner.
 
 ```
 var index_number = decimal % participants.length;
