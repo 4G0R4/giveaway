@@ -3,7 +3,7 @@
 
 ## Provably fair bitcoin giveaway picker
 
-Simple tool to give more transparency and credibility to bitcoin giveaways on SN, since sin some cases, zaprank is not a good metric, and with many participants it's hard to randomly pich one (or many) winner fairly. Now you can:
+Simple tool to give more transparency and credibility to bitcoin giveaways, raffles, tombola, draws, ballots and similars on SN, since sin some cases, zaprank is not a good metric, and with many participants it's hard to randomly pich one (or many) winner fairly. Now you can:
 
 - Have results easily verified.
 
@@ -26,7 +26,8 @@ This `index_number` is applied in the participants list, to get the position of 
 `var index_number = decimal % competitors.length;
 var winner = competitors[index_number];`
 
-For additional winners, the past winners are removed from the list and one more digit is added from the `blockhash`. A maximum 30 was added to avoid working with big numbers.
+For additional winners, the past winners are removed from the list and one more digit is added from the `blockhash`. A maximum 21 was added to avoid working with big numbers.
 
 
-If you find this useful  , please refer this tool in upcoming giveaways
+`if` you find this tool useful, refer to it in your upcoming giveaways and raffles, or zap some sats via <a href="https://coinos.io/pay/AGORA" target="_blank">lightning</a> or onchain `bc1qwcyfx0mfgxxuuf6yf2f04egjhh2xcgw8t2egf0`
+
