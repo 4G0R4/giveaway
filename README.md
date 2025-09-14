@@ -5,8 +5,12 @@
 
 Simple tool to give more transparency and credibility to bitcoin giveaways, raffles, tombola, draws, ballots and similar on SN. It will help you randomly pick winners fairly. Now you can:
 
-- Have results easily verified.
-- Save and share the results in a unique URL.
+- Bulk register unlimited participants (one per line)
+- Randomly pick max 21 winners
+- Select future block number for the draw to be executed
+- Get a sharable link to share results with all participants
+- Have results easily verified
+- Save and share the results in a unique URL
 
 
 ## How it works
