@@ -38,8 +38,8 @@
     <h2 id="giveaway_name"></h2>
     <form action="javascript:go()">
       <div class="mb-3">
-        <label for="manually" class="form-label">Add competitors in order</label>
-        <div class="small text-muted mb-2">One competitor per line
+        <label for="manually" class="form-label">Add participants in order</label>
+        <div class="small text-muted mb-2">One participant per line
         </div>
         <textarea class="form-control" id="manually" rows="6">satoshi&#10;Finney</textarea>
       </div>
@@ -106,10 +106,10 @@
       <p>This <code>index_number</code> is applied in the participants list, to get the position of the winner.</p>
 
       <code class="text-primary">
-          var index_number = decimal % competitors.length;</code>
+          var index_number = decimal % participants.length;</code>
       <br />
       <code class="text-primary">
-          var winner = competitors[index_number];
+          var winner = participants[index_number];
         </code>
 
       <p></p>
@@ -169,22 +169,22 @@
 
       //clear n_winner_div without page reload
       document.getElementById("n_winner_div").innerHTML = '';
-      var competitors = document.getElementById("manually").value.split("\n")
-      competitors = competitors.filter(n => n)
+      var participants = document.getElementById("manually").value.split("\n")
+      participants = participants.filter(n => n)
 
       var blockdata = $.ajax('https://mempool.space/api/block-height/' + document.getElementById("block").value)
         .done(function (blockhash) {
           let block = document.getElementById("block").value
           var n_winners = document.getElementById("n_winners").value
           let decimal = parseInt(blockhash.slice(-6), 16)
-          let index_number = decimal % competitors.length
-          let winner = competitors[index_number];
+          let index_number = decimal % participants.length
+          let winner = participants[index_number];
 
           document.getElementById("block-output").innerHTML = "<code class='text-primary'>" +blockhash + "</code> <a class='small text-muted' target='_blank' href='https://mempool.space/block/" + block + "'>Verify</a>";
           document.getElementById("rolled-number").innerHTML = decimal;
           document.getElementById("winner").innerHTML = winner
 
-          competitors.splice(index_number, 1)
+          participants.splice(index_number, 1)
         })
         .done(function (blockhash) {
           if (document.getElementById("n_winners").value > 1 && document.getElementById("n_winners").value < 31) {
@@ -192,9 +192,9 @@
               // As suggested by PowerGlove
               let n_winner_decimal = parseInt(blockhash.slice(-(6 + step), blockhash.length - step), 16)
 
-              let n_winner_index_number = n_winner_decimal % competitors.length
-              let n_winner = competitors[n_winner_index_number];
-              competitors.splice(n_winner_index_number, 1)
+              let n_winner_index_number = n_winner_decimal % participants.length
+              let n_winner = participants[n_winner_index_number];
+              participants.splice(n_winner_index_number, 1)
               n_winner !== undefined ?
                 document.getElementById("n_winner_div").innerHTML +=
                 '<p><strong>Winner ' + (step + 1) + ': </strong><span class="h4"><span class="badge text-bg-success ">' + n_winner + '</span></span></p>'
@@ -230,10 +230,10 @@
     }
 
     function save_share() {
-      let competitors_for_share = document.getElementById("manually").value
+      let participants_for_share = document.getElementById("manually").value
       let share_block = document.getElementById("block").value
       let share_n_winners = document.getElementById("n_winners").value
-      let encrypted = CryptoJS.AES.encrypt(share_block + '&' + share_n_winners + '&' + competitors_for_share, "bitcoin");
+      let encrypted = CryptoJS.AES.encrypt(share_block + '&' + share_n_winners + '&' + participants_for_share, "bitcoin");
       document.getElementById("url").value = 'https://4g0r4.github.io/giveaway?' + encrypted;
     }
 
