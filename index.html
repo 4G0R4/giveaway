@@ -87,43 +87,13 @@
       <p><strong>Winner: </strong><span class="h4"><span id="winner" class="badge text-bg-success "></span></span></p>
       <output id="n_winner_div"></output>
     </div>
-
-    <article class="mt-5">
-      <h2 class="h4 pb-2 mb-4 text-dark border-dark">Provably fair giveaway manager</h2>
-      <p>
-        As the <code>blockhash</code> is just a number, its last 6 digits is converted to <code>decimal</code> using
-        this function:</p>
-
-      <code class="text-primary">var decimal =  parseInt(blockhash.slice(-6), 16);</code>
-      <p></p>
-      <p>Now we have an integer (0 to 16777215) from the <code>blockhash</code>.</p>
-
-      <p>After dividing this <code>decimal</code> by the number of participants, we use the <i>modulo operator
-          (<code>%</code>)</i>
-        to get the division remainder becomes
-        the <code>index_number</code>.</p>
-
-      <p>This <code>index_number</code> is applied in the participants list, to get the position of the winner.</p>
-
-      <code class="text-primary">
-          var index_number = decimal % participants.length;</code>
-      <br />
-      <code class="text-primary">
-          var winner = participants[index_number];
-        </code>
-
-      <p></p>
-
-      <p>For additional winners, the past winners are removed from the list and one more digit is added from the
-        blockhash. A maximum 210 was added to avoid working with big numbers.</p>
-
-    </article>
   </main>
 
   <footer class="text-center border-top border-dark mt-5 pt-5 container font-monospace">
     <div class="row">
       <div class="col-md">
         <p>Created by <a href='https://stacker.news/AGORA/r/AGORA'>@AG0RA</a></p>
+        <p><a href="provability.html">Verify Provability</a></p>
         <p>blockchain data from <a href="https://mempool.space" target="_blank" rel="noreferrer">mempool.space</a></p>
       </div>
       <div class="col-md">
