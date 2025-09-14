@@ -31,6 +31,7 @@ var winner = competitors[index_number];`
 
 For additional winners, the past winners are removed from the list and one more digit is added from the `blockhash`. A maximum 21 was added to avoid working with big numbers.
 
+- - - 
 
 `if` you find this tool useful, refer to it in your upcoming giveaways and raffles, or zap some sats via <a href="https://coinos.io/pay/AGORA" target="_blank">lightning</a> or onchain `bc1qwcyfx0mfgxxuuf6yf2f04egjhh2xcgw8t2egf0`
 
