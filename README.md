@@ -1,3 +1,6 @@
+![](https://github.com/4G0R4/giveaway/blob/main/sn-logo.png)
+# Giveaway Picker
+
 ## Provably fair bitcoin giveaway picker
 
 Simple tool to give more transparency and credibility to bitcoin giveaways on SN, since sin some cases, zaprank is not a good metric, and with many participants it's hard to randomly pich one (or many) winner fairly. Now you can:
