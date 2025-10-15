@@ -7,7 +7,7 @@ A simple tool to give more transparency and credibility to bitcoin giveaways, ra
 
 ## How to use
 1. Bulk register unlimited participants (one per line)
-2. Randomly pick number of winners (max 210)
+2. Randomly pick number of winners (max 21)
 3. Select future block number for the draw to be executed
 4. Get a sharable link to share results with all participants
 5. Have results easily verified, simply hit “Submit” to start the verification
@@ -42,7 +42,7 @@ var index_number = decimal % participants.length;
 var winner = participants[index_number];
 ```
 
-For additional winners, the past winners are removed from the list and one more digit is added from the `blockhash`. A maximum 210 was added to avoid working with big numbers.
+For additional winners, the past winners are removed from the list and one more digit is added from the `blockhash`. A maximum 21 was added to avoid working with big numbers.
 
 - - - 
 
